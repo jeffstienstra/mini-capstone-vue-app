@@ -19,7 +19,7 @@ export default {
       products: [
         {
           id: 1,
-          name: "DW Design Series",
+          name: "DW Dum Dum Design Series",
           description: "A nice drum set.",
           price: 500,
           images:
