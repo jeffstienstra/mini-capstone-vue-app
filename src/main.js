@@ -4,7 +4,9 @@ import router from "./router";
 import axios from "axios";
 
 axios.defaults.baseURL =
-  process.env.NODE_ENV === "development" ? "http://localhost:3000" : "determined-darwin-172c76.netlify.app";
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://whispering-ravine-62802.herokuapp.com/products/";
 
 Vue.config.productionTip = false;
 
