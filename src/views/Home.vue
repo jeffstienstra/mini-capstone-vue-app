@@ -13,7 +13,8 @@
 <style></style>
 
 <script>
-/* global axios */
+import axios from "axios";
+
 export default {
   data: function () {
     return {
