@@ -13,30 +13,23 @@
 <style></style>
 
 <script>
+/* global axios */
 export default {
   data: function () {
     return {
-      products: [
-        {
-          id: 1,
-          name: "DW Dum Dum Design Series",
-          description: "A nice drum set.",
-          price: 500,
-          images:
-            "https://images.reverb.com/image/upload/s--V5KFpzg_--/f_auto,t_supersize/v1587860801/jiryixflpenossdgn9jk.jpg",
-        },
-        {
-          id: 2,
-          name: "TAMA Studio Series",
-          description: "A very nice drum set.",
-          price: 900,
-          images:
-            "https://images.reverb.com/image/upload/s--yOXCdryk--/f_auto,t_supersize/v1587861247/fcxw6tknq0p8ryzcket9.jpg",
-        },
-      ],
+      products: [],
     };
   },
-  created: function () {},
-  methods: {},
+  created: function () {
+    this.indexProducts();
+  },
+  methods: {
+    indexProducts: function () {
+      axios.get("/products").then((response) => {
+        this.products = response.data;
+        console.log("All products", this.products);
+      });
+    },
+  },
 };
 </script>
